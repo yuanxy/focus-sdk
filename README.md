@@ -5,12 +5,13 @@
 http://mvnrepository.com/artifact/com.github.yuanxy/focus-sdk/1.0.0
 # 安装教程
 pom.xml 粘贴即可使用。
-
+<!-- -->
 <dependency>
   <groupId>com.github.yuanxy</groupId>
   <artifactId>focus-sdk</artifactId>
   <version>1.0.0</version>
 </dependency>
+<!-- -->
 
 注意如果你项目有用到 httpcomponents 请注意你的版本，如果运行报错，请复制下面的配置到pom.xml
 
@@ -37,12 +38,15 @@ pom.xml 粘贴即可使用。
     
 使用说明
 确认 pom.xml 添加了 focus-sdk 的配置信息
+
 阿里短信 MobileExt.sendMobileSms("","","","","","");
+
 阿里邮件 EmailExt.sendEmail("","","","","","","");
 
 # 已实现功能:
 
 邮件发送[√]
+
 国内短信发送[√]
 
 # 使用参考
