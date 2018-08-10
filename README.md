@@ -5,13 +5,14 @@
 http://mvnrepository.com/artifact/com.github.yuanxy/focus-sdk/1.0.0
 # 安装教程
 pom.xml 粘贴即可使用。
-<!-- -->
-<dependency>
-  <groupId>com.github.yuanxy</groupId>
-  <artifactId>focus-sdk</artifactId>
-  <version>1.0.0</version>
-</dependency>
-<!-- -->
+
+```
+   <dependency>
+   <groupId>com.github.yuanxy</groupId>
+   <artifactId>focus-sdk</artifactId>
+   <version>1.0.0</version>
+   </dependency>
+```
 
 注意如果你项目有用到 httpcomponents 请注意你的版本，如果运行报错，请复制下面的配置到pom.xml
 
