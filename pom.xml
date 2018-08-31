@@ -3,12 +3,13 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.yuanxy</groupId>
     <artifactId>focus-sdk</artifactId>
-    <version>y</version>
+    <version>2.0.0</version>
     <packaging>jar</packaging>
 
     <name>focus-sdk</name>
     <url>https://github.com/yuanxy/focus-sdk</url>
-    <description>A Java erasure codes wrapper library for focus-sdk</description>
+    <description>focus-sdk 基于阿里云提供的HTTP接口的封装，
+        可以实现邮件、国内短信的发送、人机验证鉴权。yuanxy008@gmail.com</description>
 
     <parent>
         <groupId>org.sonatype.oss</groupId>
@@ -174,19 +175,33 @@
                 </configuration>
             </plugin>
 
-            <!-- JavaDoc -->
+            <!-- JavaDoc
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>2.10.3</version>
                 <configuration>
-                    <!-- 解决 java8  发布到 maven 异常 -->
+                     解决 java8  发布到 maven 异常
                     <additionalparam>-Xdoclint:none</additionalparam>
                     <encoding>UTF-8</encoding>
                     <outputDirectory>${basedir}/target</outputDirectory>
                     <reportOutputDirectory>${basedir}/target</reportOutputDirectory>
                 </configuration>
             </plugin>
+    -->
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.7</version>
+                <configuration>
+                    <additionalparam>-Xdoclint:none</additionalparam>
+                    <encoding>UTF-8</encoding>
+                    <outputDirectory>${basedir}/target</outputDirectory>
+                    <reportOutputDirectory>${basedir}/target</reportOutputDirectory>
+                </configuration>
+            </plugin>
+
 
             <!-- 安装源码到本地仓库 -->
             <plugin>

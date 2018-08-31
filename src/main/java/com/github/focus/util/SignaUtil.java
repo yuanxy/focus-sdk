@@ -53,7 +53,7 @@ public class SignaUtil {
     }
 
     /***
-     * 解析阿里接口返回的  Message
+     * 解析阿里接口返回的  Message 短信邮件使用
      * @param str
      * @param nodesKey
      * @return
@@ -70,6 +70,36 @@ public class SignaUtil {
             String message = null;
             Element tpl = tplList.get(0);
             Iterator msgIt = tpl.elementIterator("Message");
+            if (msgIt.hasNext()) {
+                message = ((Element) msgIt.next()).getTextTrim();
+            } else {
+                //发送成功 没有返回值 自定义一个
+                message = "OK";
+            }
+            return message;
+        } else {
+            return "";
+        }
+    }
+
+    /***
+     * 解析阿里接口返回的  Message 人机验证接口返回的数据
+     * @param str
+     * @param nodesKey
+     * @return
+     * @throws DocumentException
+     */
+    public static String getCode(String str, String nodesKey) throws DocumentException {
+        if (!isEmpty(str)) {
+            Document doc = DocumentHelper.parseText(str);
+            List<Element> tplList = doc.selectNodes(nodesKey);
+            if (isEmpty(tplList)) {
+                //兼容发送异常时获取的数据
+                tplList = doc.selectNodes("/Error");
+            }
+            String message = null;
+            Element tpl = tplList.get(0);
+            Iterator msgIt = tpl.elementIterator("Code");
             if (msgIt.hasNext()) {
                 message = ((Element) msgIt.next()).getTextTrim();
             } else {
