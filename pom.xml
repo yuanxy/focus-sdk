@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.yuanxy</groupId>
@@ -9,7 +10,10 @@
     <name>focus-sdk</name>
     <url>https://github.com/yuanxy/focus-sdk</url>
     <description>focus-sdk 基于阿里云提供的HTTP接口的封装，
-        可以实现邮件、国内短信的发送、人机验证鉴权。yuanxy008@gmail.com</description>
+        可以实现邮件、国内短信的发送、人机验证鉴权、图片识别等。yuanxy008@gmail.com
+        （Based on the encapsulation of the HTTP interface provided by Alibaba cloud,It can realize the sending of
+        e-mail, domestic short message, man-machine verification and authentication, picture recognition, etc）
+    </description>
 
     <parent>
         <groupId>org.sonatype.oss</groupId>
@@ -48,6 +52,7 @@
         <commons-lang.version>2.6</commons-lang.version>
         <commons-io.version>2.5</commons-io.version>
         <jdom.version>2.0.2</jdom.version>
+        <aliyun.facebody.version>1.0.0</aliyun.facebody.version>
     </properties>
 
     <dependencies>
@@ -77,12 +82,7 @@
             <version>1.1.6</version>
         </dependency>
 
-        <!--<dependency>
-          <groupId>org.jdom</groupId>
-          <artifactId>jdom</artifactId>
-          <version>${jdom.version}</version>
-        </dependency>-->
-        <!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
+
         <dependency>
             <groupId>dom4j</groupId>
             <artifactId>dom4j</artifactId>
@@ -94,8 +94,9 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpcore</artifactId>
-            <version>4.3.1</version>
+            <version>4.4.3</version>
         </dependency>
+
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpmime</artifactId>
@@ -109,7 +110,7 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
-            <version>4.3.1</version>
+            <version>4.5.1</version>
         </dependency>
         <!--apacheHttp-->
 
@@ -146,8 +147,6 @@
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
-
-
 
 
     <build>

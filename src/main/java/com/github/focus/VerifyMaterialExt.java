@@ -168,14 +168,5 @@ public class VerifyMaterialExt {
         paras.put("RegionId", "cn-shanghai");
     }
 
-    public static void main(String[] args) {
-       /* //https://r7000.oss-cn-shanghai.aliyuncs.com/o_1cllahqg4gnt1nt11s9h1tsleuja.jpg
-        String s = "https://r7000.oss-cn-shanghai.aliyuncs.com/o_1boofsnpm1ncnnr811ck1tn6qnbf.jpg";
-        //String str = recognize("LTAI4GAiiKomwjWNNKLnSStH", s, "UOcUWVK3secUDa9scMV4fX0qDXqhf8","RecognizeAccountPage");
-        String str = identityCard("LTAI4GAiiKomwjWNNKLnSStH", s, "UOcUWVK3secUDa9scMV4fX0qDXqhf8","RecognizeAccountPage");
-        System.out.println(str);*/
-        MobileExt.sendMobileSms("LTAI4GAiiKomwjWNNKLnSStH","18971052475","1","1","3","UOcUWVK3secUDa9scMV4fX0qDXqhf8");
-    }
-
 
 }

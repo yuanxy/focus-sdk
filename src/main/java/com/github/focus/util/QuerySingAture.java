@@ -4,11 +4,12 @@ import java.util.Map;
 
 /**
  * 参数处理封装
+ *
  * @Author 袁旭云【rain.yuan@transn.com】
  * Created by rain on 2020/4/16.
  * @Date 2020/4/16 18:50
  */
-public  class QuerySingAture {
+public class QuerySingAture {
     private String keySecret;
     private Map<String, String> paras;
     private StringBuilder sortQueryStringTmp;
