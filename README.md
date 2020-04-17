@@ -35,6 +35,8 @@
   <artifactId>focus-sdk</artifactId>
   <version>2.0.0</version>
  </dependency>
+ 
+ 最新版本2.0.1
  ```
 ```
 //短信
